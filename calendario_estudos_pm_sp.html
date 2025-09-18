@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário de Estudos PM SP - Setembro </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #070606;
+        }
+        th {
+            background-color: #4c7faf;
+            color: white;
+        }
+        td {
+            background-color: #fff;
+            min-height: 120px;
+            vertical-align: top;
+        }
+        .day {
+            font-weight: bold;
+        }
+        .subject {
+            display: block;
+            margin-top: 10px;
+        }
+        .btn {
+            width: 100%;
+            height: 100%;
+            padding: 15px;
+            background-color: #fcf8f8;
+            color: rgb(6, 6, 6);
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .btn:hover {
+            background-color: #8e9093;
+        }
+        .btn .day {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .subject-list {
+            margin-top: 20px;
+        }
+        .subject-list h2 {
+            color: #ffffff;
+        }
+        .subject {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .back-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            width: 150px;
+        }
+        .back-btn:hover {
+            background-color: #457aa0;
+        }
+        .study-detail {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Calendário de Estudos - Setembro</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Domingo</th>
+                    <th>Segunda</th>
+                    <th>Terça</th>
+                    <th>Quarta</th>
+                    <th>Quinta</th>
+                    <th>Sexta</th>
+                    <th>Sábado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Semana 1 -->
+                <tr>
+                    <td></td>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(1)">
+                            <div class="day">1</div>
+                            <div class="subject">Português</div>
+                            <div class="subject">Matemática</div>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(2)">
+                            <div class="day">2</div>
+                            <div class="subject">História</div>
+                            <div class="subject">Geografia</div>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(3)">
+                            <div class="day">3</div>
+                            <div class="subject">Legislação</div>
+                            <div class="subject">Atualidades</div>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(4)">
+                            <div class="day">4</div>
+                            <div class="subject">Informática</div>
+                            <div class="subject">Redação</div>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(5)">
+                            <div class="day">5</div>
+                            <div class="subject">Português</div>
+                            <div class="subject">Matemática</div>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(6)">
+                            <div class="day">6</div>
+                            <div class="subject">História</div>
+                            <div class="subject">Geografia</div>
+                        </button>
+                    </td>
+                </tr>
+                <!-- Semana 2 -->
+                <tr>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(7)">
+                            <div class="day">7</div>
+                            <div class="subject">Legislação</div>
+                            <div class="subject">Atualidades</div>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(8)">
+                            <div class="day">8</div>
+                            <div class="subject">Informática</div>
+                            <div class="subject">Redação</div>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(9)">
+                            <div class="day">9</div>
+                            <div class="subject">Português</div>
+                            <div class="subject">Matemática</div>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(10)">
+                            <div class="day">10</div>
+                            <div class="subject">História</div>
+                            <div class="subject">Geografia</div>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(11)">
+                            <div class="day">11</div>
+                            <div class="subject">Legislação</div>
+                            <div class="subject">Atualidades</div>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(12)">
+                            <div class="day">12</div>
+                            <div class="subject">Informática</div>
+                            <div class="subject">Redação</div>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(13)">
+                            <div class="day">13</div>
+                            <div class="subject">Português</div>
+                            <div class="subject">Matemática</div>
+                        </button>
+                    </td>
+                </tr>
+                <!-- Semana 3 -->
+                <tr>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(14)">
+                            <div class="day">14</div>
+                            <div class="subject">História</div>
+                            <div class="subject">Geografia</div>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(15)">
+                            <div class="day">15</div>
+                            <div class="subject">Legislação</div>
+                            <div class="subject">Atualidades</div>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(16)">
+                            <div class="day">16</div>
+                            <div class="subject">Informática</div>
+                            <div class="subject">Redação</div>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(17)">
+                            <div class="day">17</div>
+                            <div class="subject">Português</div>
+                            <div class="subject">Matemática</div>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(18)">
+                            <div class="day">18</div>
+                            <div class="subject">História</div>
+                            <div class="subject">Geografia</div>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(19)">
+                            <div class="day">19</div>
+                            <div class="subject">Legislação</div>
+                            <div class="subject">Atualidades</div>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(20)">
+                            <div class="day">20</div>
+                            <div class="subject">Informática</div>
+                            <div class="subject">Redação</div>
+                        </button>
+                    </td>
+                </tr>
+                <!-- Semana 4 -->
+                <tr>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(21)">
+                            <div class="day">21</div>
+                            <div class="subject">Português</div>
+                            <div class="subject">Matemática</div>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(22)">
+                            <div class="day">22</div>
+                            <div class="subject">História</div>
+                            <div class="subject">Geografia</div>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(23)">
+                            <div class="day">23</div>
+                            <div class="subject">Legislação</div>
+                            <div class="subject">Atualidades</div>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(24)">
+                            <div class="day">24</div>
+                            <div class="subject">Informática</div>
+                            <div class="subject">Redação</div>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(25)">
+                            <div class="day">25</div>
+                            <div class="subject">Português</div>
+                            <div class="subject">Matemática</div>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(26)">
+                            <div class="day">26</div>
+                            <div class="subject">História</div>
+                            <div class="subject">Geografia</div>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(27)">
+                            <div class="day">27</div>
+                            <div class="subject">Legislação</div>
+                            <div class="subject">Atualidades</div>
+                        </button>
+                    </td>
+                </tr>
+                <!-- Semana 5 -->
+                <tr>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(28)">
+                            <div class="day">28</div>
+                            <div class="subject">Informática</div>
+                            <div class="subject">Redação</div>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(29)">
+                            <div class="day">29</div>
+                            <div class="subject">Português</div>
+                            <div class="subject">Matemática</div>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn" onclick="showStudyDetails(30)">
+                            <div class="day">30</div>
+                            <div class="subject">História</div>
+                            <div class="subject">Geografia</div>
+                        </button>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Detalhes do Estudo -->
+        <div class="study-detail" id="studyDetail1">
+            <h2>Estudos do Dia 1 - PM SP</h2>
+            <div class="subject-list">
+                <h3>Português</h3>
+                <div class="subject"><strong>Leitura e Interpretação:</strong> Estudo de textos para interpretação e questões de concursos.</div>
+                <div class="subject"><strong>Gramática:</strong> Revisão de concordância, acentuação e pontuação.</div>
+                <h3>Matemática</h3>
+                <div class="subject"><strong>Operações:</strong> Reforçar adição, subtração, multiplicação e divisão.</div>
+                <div class="subject"><strong>Porcentagem:</strong> Resolver problemas envolvendo porcentagens.</div>
+            </div>
+            <button class="back-btn" onclick="hideStudyDetails(1)">Voltar ao Calendário</button>
+        </div>
+
+        <div class="study-detail" id="studyDetail2">
+            <h2>Estudos do Dia 2 - PM SP</h2>
+            <div class="subject-list">
+                <h3>História</h3>
+                <div class="subject"><strong>Brasil Império:</strong> Estudo do período imperial brasileiro.</div>
+                <div class="subject"><strong>República Velha:</strong> Estudo do início da república e suas transformações.</div>
+                <h3>Geografia</h3>
+                <div class="subject"><strong>Geopolítica Mundial:</strong> Análise das relações internacionais e blocos econômicos.</div>
+                <div class="subject"><strong>Geografia do Brasil:</strong> Estudo das regiões brasileiras e suas características.</div>
+            </div>
+            <button class="back-btn" onclick="hideStudyDetails(2)">Voltar ao Calendário</button>
+        </div>
+
+        <!-- Detalhes do Estudo (Dia 3) -->
+        <div class="study-detail" id="studyDetail3">
+            <h2>Estudos do Dia 3 - PM SP</h2>
+            <div class="subject-list">
+                <h3>Legislação</h3>
+                <div class="subject"><strong>Código Penal:</strong> Estudo do Código Penal Brasileiro, com foco nos artigos mais cobrados em concursos.</div>
+                <div class="subject"><strong>Direitos Humanos:</strong> Análise de convenções internacionais e leis nacionais sobre os direitos fundamentais.</div>
+                <h3>Atualidades</h3>
+                <div class="subject"><strong>Política Brasileira:</strong> Estudo dos principais acontecimentos e figuras políticas do Brasil.</div>
+                <div class="subject"><strong>Eventos Mundiais:</strong> Revisão dos eventos globais recentes e suas repercussões.</div>
+            </div>
+            <button class="back-btn" onclick="hideStudyDetails(3)">Voltar ao Calendário</button>
+        </div>
+
+        <!-- Detalhes do Estudo (Dia 4) -->
+        <div class="study-detail" id="studyDetail4">
+            <h2>Estudos do Dia 4 - PM SP</h2>
+            <div class="subject-list">
+                <h3>Informática</h3>
+                <div class="subject"><strong>Sistemas Operacionais:</strong> Conceitos sobre sistemas operacionais e suas aplicações em ambientes de trabalho.</div>
+                <div class="subject"><strong>Excel Básico:</strong> Comandos e funções principais no Microsoft Excel.</div>
+                <h3>Redação</h3>
+                <div class="subject"><strong>Estrutura do Texto:</strong> Como organizar introdução, desenvolvimento e conclusão de uma redação.</div>
+                <div class="subject"><strong>Argumentação:</strong> Técnicas para construir argumentos consistentes e persuasivos.</div>
+            </div>
+            <button class="back-btn" onclick="hideStudyDetails(4)">Voltar ao Calendário</button>
+        </div>
+
+        <!-- Detalhes do Estudo (Dia 5) -->
+        <div class="study-detail" id="studyDetail5">
+            <h2>Estudos do Dia 5 - PM SP</h2>
+            <div class="subject-list">
+                <h3>Português</h3>
+                <div class="subject"><strong>Leitura e Interpretação:</strong> Análise de textos de diferentes gêneros.</div>
+                <div class="subject"><strong>Gramática:</strong> Estudo de tempos verbais e concordância verbal e nominal.</div>
+                <h3>Matemática</h3>
+                <div class="subject"><strong>Porcentagem:</strong> Revisão de questões envolvendo cálculos de porcentagem.</div>
+                <div class="subject"><strong>Funções Matemáticas:</strong> Estudo das funções do 1º grau e suas representações gráficas.</div>
+            </div>
+            <button class="back-btn" onclick="hideStudyDetails(5)">Voltar ao Calendário</button>
+        </div>
+
+        <!-- Detalhes do Estudo (Dia 6) -->
+        <div class="study-detail" id="studyDetail6">
+            <h2>Estudos do Dia 6 - PM SP</h2>
+            <div class="subject-list">
+                <h3>História</h3>
+                <div class="subject"><strong>Brasil Império:</strong> Estudo sobre a independência do Brasil e o período regencial.</div>
+                <div class="subject"><strong>Brasil República:</strong> Estudo da República Velha e suas implicações sociais e políticas.</div>
+                <h3>Geografia</h3>
+                <div class="subject"><strong>Geografia do Brasil:</strong> Estudo da economia e das regiões brasileiras.</div>
+                <div class="subject"><strong>Geopolítica:</strong> Estudo de conflitos e alianças políticas no contexto mundial.</div>
+            </div>
+            <button class="back-btn" onclick="hideStudyDetails(6)">Voltar ao Calendário</button>
+        </div>
+
+        <!-- Detalhes do Estudo (Dia 7) -->
+<div class="study-detail" id="studyDetail7">
+    <h2>Estudos do Dia 7 - PM SP</h2>
+    <div class="subject-list">
+        <h3>Legislação</h3>
+        <div class="subject"><strong>Código de Processo Penal:</strong> Estudo dos princípios e regras do CPP.</div>
+        <div class="subject"><strong>Direitos Humanos:</strong> Leitura e interpretação dos artigos fundamentais da constituição.</div>
+        <h3>Atualidades</h3>
+        <div class="subject"><strong>Política Internacional:</strong> Estudo das principais relações diplomáticas do Brasil com outros países.</div>
+    </div>
+    <button class="back-btn" onclick="hideStudyDetails(7)">Voltar ao Calendário</button>
+</div>
+
+<!-- Detalhes do Estudo (Dia 8) -->
+<div class="study-detail" id="studyDetail8">
+    <h2>Estudos do Dia 8 - PM SP</h2>
+    <div class="subject-list">
+        <h3>Informática</h3>
+        <div class="subject"><strong>Windows 10:</strong> Conhecimento sobre o sistema operacional Windows 10.</div>
+        <div class="subject"><strong>Pacote Office:</strong> Estudo sobre os programas básicos do pacote Office, com ênfase no Word.</div>
+        <h3>Redação</h3>
+        <div class="subject"><strong>Dissertação Argumentativa:</strong> Como construir uma redação com argumentos sólidos e bem estruturados.</div>
+    </div>
+    <button class="back-btn" onclick="hideStudyDetails(8)">Voltar ao Calendário</button>
+</div>
+
+<!-- Detalhes do Estudo (Dia 9) -->
+<div class="study-detail" id="studyDetail9">
+    <h2>Estudos do Dia 9 - PM SP</h2>
+    <div class="subject-list">
+        <h3>Português</h3>
+        <div class="subject"><strong>Leitura e Interpretação:</strong> Estudo de textos literários e não literários.</div>
+        <div class="subject"><strong>Ortografia:</strong> Revisão das regras de ortografia da língua portuguesa.</div>
+        <h3>Matemática</h3>
+        <div class="subject"><strong>Geometria:</strong> Estudo das formas geométricas e suas propriedades.</div>
+    </div>
+    <button class="back-btn" onclick="hideStudyDetails(9)">Voltar ao Calendário</button>
+</div>
+
+<!-- Detalhes do Estudo (Dia 10) -->
+<div class="study-detail" id="studyDetail10">
+    <h2>Estudos do Dia 10 - PM SP</h2>
+    <div class="subject-list">
+        <h3>História</h3>
+        <div class="subject"><strong>Primeira República:</strong> Estudo da República Velha e seus principais eventos.</div>
+        <div class="subject"><strong>Era Vargas:</strong> A transição para a Era Vargas e o impacto no Brasil.</div>
+        <h3>Geografia</h3>
+        <div class="subject"><strong>Climas do Brasil:</strong> Estudo dos tipos climáticos e sua distribuição no Brasil.</div>
+    </div>
+    <button class="back-btn" onclick="hideStudyDetails(10)">Voltar ao Calendário</button>
+</div>
+
+<!-- Detalhes do Estudo (Dia 11) -->
+<div class="study-detail" id="studyDetail11">
+    <h2>Estudos do Dia 11 - PM SP</h2>
+    <div class="subject-list">
+        <h3>Legislação</h3>
+        <div class="subject"><strong>Código de Defesa do Consumidor:</strong> Estudo dos direitos do consumidor.</div>
+        <div class="subject"><strong>Direitos Humanos:</strong> Estudo dos direitos fundamentais e sua aplicação.</div>
+        <h3>Atualidades</h3>
+        <div class="subject"><strong>Política Nacional:</strong> Análise das mudanças políticas e econômicas recentes no Brasil.</div>
+    </div>
+    <button class="back-btn" onclick="hideStudyDetails(11)">Voltar ao Calendário</button>
+</div>
+
+<!-- Detalhes do Estudo (Dia 12) -->
+<div class="study-detail" id="studyDetail12">
+    <h2>Estudos do Dia 12 - PM SP</h2>
+    <div class="subject-list">
+        <h3>Informática</h3>
+        <div class="subject"><strong>Excel Avançado:</strong> Técnicas avançadas para planilhas no Excel.</div>
+        <div class="subject"><strong>Internet:</strong> Conceitos sobre navegação segura e uso de redes sociais.</div>
+        <h3>Redação</h3>
+        <div class="subject"><strong>Texto Expositivo:</strong> Como desenvolver um texto explicativo de forma clara.</div>
+    </div>
+    <button class="back-btn" onclick="hideStudyDetails(12)">Voltar ao Calendário</button>
+</div>
+
+<!-- Detalhes do Estudo (Dia 13) -->
+<div class="study-detail" id="studyDetail13">
+    <h2>Estudos do Dia 13 - PM SP</h2>
+    <div class="subject-list">
+        <h3>Português</h3>
+        <div class="subject"><strong>Interpretação de Textos:</strong> Leitura crítica e análise de textos literários e informativos.</div>
+        <div class="subject"><strong>Sintaxe:</strong> Estudo de orações e períodos compostos.</div>
+        <h3>Matemática</h3>
+        <div class="subject"><strong>Aritmética:</strong> Revisão de problemas aritméticos envolvendo regra de três e proporções.</div>
+    </div>
+    <button class="back-btn" onclick="hideStudyDetails(13)">Voltar ao Calendário</button>
+</div>
+
+<!-- Detalhes do Estudo (Dia 14) -->
+<div class="study-detail" id="studyDetail14">
+    <h2>Estudos do Dia 14 - PM SP</h2>
+    <div class="subject-list">
+        <h3>História</h3>
+        <div class="subject"><strong>Período Colonial:</strong> Análise da colonização do Brasil e suas implicações econômicas e sociais.</div>
+        <div class="subject"><strong>Independência do Brasil:</strong> Estudo dos eventos e fatores que levaram à independência.</div>
+        <h3>Geografia</h3>
+        <div class="subject"><strong>Cartografia:</strong> Leitura de mapas, escalas e coordenadas geográficas.</div>
+    </div>
+    <button class="back-btn" onclick="hideStudyDetails(14)">Voltar ao Calendário</button>
+</div>
+
+<!-- Detalhes do Estudo (Dia 15) -->
+<div class="study-detail" id="studyDetail15">
+    <h2>Estudos do Dia 15 - PM SP</h2>
+    <div class="subject-list">
+        <h3>Legislação</h3>
+        <div class="subject"><strong>Código Penal Militar:</strong> Estudo do Código Penal Militar, focando nos artigos mais cobrados.</div>
+        <div class="subject"><strong>Direitos e Garantias Fundamentais:</strong> Estudo da Constituição Brasileira e dos direitos assegurados ao cidadão.</div>
+        <h3>Atualidades</h3>
+        <div class="subject"><strong>Economia Brasileira:</strong> Análise das recentes reformas econômicas e seus impactos.</div>
+    </div>
+    <button class="back-btn" onclick="hideStudyDetails(15)">Voltar ao Calendário</button>
+</div>
+
+<!-- Detalhes do Estudo (Dia 16) -->
+<div class="study-detail" id="studyDetail16">
+    <h2>Estudos do Dia 16 - PM SP</h2>
+    <div class="subject-list">
+        <h3>Informática</h3>
+        <div class="subject"><strong>Redes de Computadores:</strong> Noções básicas de redes, IPs, e protocolos.</div>
+        <div class="subject"><strong>Ferramentas de Busca:</strong> Como utilizar ferramentas de busca de forma eficiente.</div>
+        <h3>Redação</h3>
+        <div class="subject"><strong>Estrutura Argumentativa:</strong> Como construir argumentos sólidos e bem fundamentados.</div>
+    </div>
+    <button class="back-btn" onclick="hideStudyDetails(16)">Voltar ao Calendário</button>
+</div>
+
+<!-- Detalhes do Estudo (Dia 17) -->
+<div class="study-detail" id="studyDetail17">
+    <h2>Estudos do Dia 17 - PM SP</h2>
+    <div class="subject-list">
+        <h3>Português</h3>
+        <div class="subject"><strong>Compreensão e Produção de Texto:</strong> Estratégias para responder questões de interpretação.</div>
+        <div class="subject"><strong>Concordância Verbal e Nominal:</strong> Regras e exceções da concordância.</div>
+        <h3>Matemática</h3>
+        <div class="subject"><strong>Funções Matemáticas:</strong> Estudo de funções do 1º grau e suas aplicações.</div>
+    </div>
+    <button class="back-btn" onclick="hideStudyDetails(17)">Voltar ao Calendário</button>
+</div>
+
+<!-- Detalhes do Estudo (Dia 18) -->
+<div class="study-detail" id="studyDetail18">
+    <h2>Estudos do Dia 18 - PM SP</h2>
+    <div class="subject-list">
+        <h3>História</h3>
+        <div class="subject"><strong>Revolução Industrial:</strong> Estudo das principais transformações econômicas e sociais.</div>
+        <div class="subject"><strong>Primeira Guerra Mundial:</strong> Análise das causas e consequências da Primeira Guerra.</div>
+        <h3>Geografia</h3>
+        <div class="subject"><strong>Clima e Tempo:</strong> Diferenças entre clima e tempo e suas influências no Brasil.</div>
+    </div>
+    <button class="back-btn" onclick="hideStudyDetails(18)">Voltar ao Calendário</button>
+</div>
+
+<!-- Detalhes do Estudo (Dia 19) -->
+<div class="study-detail" id="studyDetail19">
+    <h2>Estudos do Dia 19 - PM SP</h2>
+    <div class="subject-list">
+        <h3>Legislação</h3>
+        <div class="subject"><strong>Lei de Abuso de Autoridade:</strong> Estudo dos direitos de defesa e da atuação do policial militar.</div>
+        <div class="subject"><strong>Direitos Humanos:</strong> A aplicação dos direitos humanos na atuação da polícia.</div>
+        <h3>Atualidades</h3>
+        <div class="subject"><strong>Economia Internacional:</strong> Estudo da situação econômica global e suas repercussões no Brasil.</div>
+    </div>
+    <button class="back-btn" onclick="hideStudyDetails(19)">Voltar ao Calendário</button>
+</div>
+
+<!-- Detalhes do Estudo (Dia 20) -->
+<div class="study-detail" id="studyDetail20">
+    <h2>Estudos do Dia 20 - PM SP</h2>
+    <div class="subject-list">
+        <h3>Informática</h3>
+        <div class="subject"><strong>Redes Sociais:</strong> Como usar as redes sociais de forma eficiente no contexto do trabalho policial.</div>
+        <div class="subject"><strong>Segurança de Dados:</strong> Práticas para manter a segurança de dados na internet.</div>
+        <h3>Redação</h3>
+        <div class="subject"><strong>Estrutura de Texto:</strong> Como escrever uma introdução, desenvolvimento e conclusão eficientes.</div>
+    </div>
+    <button class="back-btn" onclick="hideStudyDetails(20)">Voltar ao Calendário</button>
+</div>
+
+<!-- Detalhes do Estudo (Dia 21) -->
+<div class="study-detail" id="studyDetail21">
+    <h2>Estudos do Dia 21 - PM SP</h2>
+    <div class="subject-list">
+        <h3>Português</h3>
+        <div class="subject"><strong>Leitura Crítica:</strong> Como interpretar textos com maior profundidade.</div>
+        <div class="subject"><strong>Pronomes:</strong> Estudo de pronomes pessoais, possessivos e relativos.</div>
+        <h3>Matemática</h3>
+        <div class="subject"><strong>Porcentagem:</strong> Cálculos de descontos, aumentos e lucros.</div>
+    </div>
+    <button class="back-btn" onclick="hideStudyDetails(21)">Voltar ao Calendário</button>
+</div>
+ 
+<!-- Detalhes do Estudo (Dia 22) -->
+<div class="study-detail" id="studyDetail22">
+    <h2>Estudos do Dia 22 - PM SP</h2>
+    <div class="subject-list">
+        <h3>História</h3>
+        <div class="subject"><strong>Segunda Guerra Mundial:</strong> Estudo dos principais eventos e países envolvidos.</div>
+        <div class="subject"><strong>Guerra Fria:</strong> Análise das tensões políticas e ideológicas entre EUA e URSS.</div>
+        <h3>Geografia</h3>
+        <div class="subject"><strong>Globalização:</strong> Como a globalização impacta o Brasil e o mundo.</div>
+    </div>
+    <button class="back-btn" onclick="hideStudyDetails(22)">Voltar ao Calendário</button>
+</div>
+
+<!-- Detalhes do Estudo (Dia 23) -->
+<div class="study-detail" id="studyDetail23">
+    <h2>Estudos do Dia 23 - PM SP</h2>
+    <div class="subject-list">
+        <h3>Legislação</h3>
+        <div class="subject"><strong>Lei de Tortura:</strong> Conhecimento sobre a Lei nº 9.455/97.</div>
+        <div class="subject"><strong>Lei de Drogas:</strong> Estudo da Lei nº 11.343/2006 e seu impacto nas atuações policiais.</div>
+        <h3>Atualidades</h3>
+        <div class="subject"><strong>Criminalidade e Violência:</strong> Estudo dos índices de criminalidade no Brasil e suas causas.</div>
+    </div>
+    <button class="back-btn" onclick="hideStudyDetails(23)">Voltar ao Calendário</button>
+</div>
+
+<!-- Detalhes do Estudo (Dia 24) -->
+<div class="study-detail" id="studyDetail24">
+    <h2>Estudos do Dia 24 - PM SP</h2>
+    <div class="subject-list">
+        <h3>Informática</h3>
+        <div class="subject"><strong>Hardware:</strong> Estudo sobre componentes físicos do computador.</div>
+        <div class="subject"><strong>Software:</strong> Tipos de softwares e suas aplicações no trabalho policial.</div>
+        <h3>Redação</h3>
+        <div class="subject"><strong>Esquema de Argumentação:</strong> Como planejar e estruturar uma redação argumentativa eficaz.</div>
+    </div>
+    <button class="back-btn" onclick="hideStudyDetails(24)">Voltar ao Calendário</button>
+</div>
+
+<!-- Detalhes do Estudo (Dia 25) -->
+<div class="study-detail" id="studyDetail25">
+    <h2>Estudos do Dia 25 - PM SP</h2>
+    <div class="subject-list">
+        <h3>Português</h3>
+        <div class="subject"><strong>Concordância Verbal:</strong> Estudo de concordância verbal em frases complexas.</div>
+        <div class="subject"><strong>Redação - Tipos de Texto:</strong> Como adaptar o estilo de escrita de acordo com o tipo de texto.</div>
+        <h3>Matemática</h3>
+        <div class="subject"><strong>Probabilidade:</strong> Conceitos básicos de probabilidade e suas aplicações em estatísticas.</div>
+    </div>
+    <button class="back-btn" onclick="hideStudyDetails(25)">Voltar ao Calendário</button>
+</div>
+
+<!-- Detalhes do Estudo (Dia 26) -->
+<div class="study-detail" id="studyDetail26">
+    <h2>Estudos do Dia 26 - PM SP</h2>
+    <div class="subject-list">
+        <h3>História</h3>
+        <div class="subject"><strong>Ditadura Militar:</strong> Estudo do período de 1964 a 1985 no Brasil.</div>
+        <div class="subject"><strong>Redemocratização:</strong> Processos que levaram à volta do regime democrático no Brasil.</div>
+        <h3>Geografia</h3>
+        <div class="subject"><strong>Geopolítica:</strong> Estudo das principais tensões e alianças políticas ao redor do mundo.</div>
+    </div>
+    <button class="back-btn" onclick="hideStudyDetails(26)">Voltar ao Calendário</button>
+</div>
+
+<!-- Detalhes do Estudo (Dia 27) -->
+<div class="study-detail" id="studyDetail27">
+    <h2>Estudos do Dia 27 - PM SP</h2>
+    <div class="subject-list">
+        <h3>Legislação</h3>
+        <div class="subject"><strong>Lei de Execução Penal:</strong> Estudo da execução penal e direitos do condenado.</div>
+        <div class="subject"><strong>Direitos Humanos:</strong> Discussão sobre o papel das polícias no respeito aos direitos humanos.</div>
+        <h3>Atualidades</h3>
+        <div class="subject"><strong>Impactos da Pandemia:</strong> Estudo dos efeitos sociais e econômicos da pandemia de COVID-19 no Brasil.</div>
+    </div>
+    <button class="back-btn" onclick="hideStudyDetails(27)">Voltar ao Calendário</button>
+</div>
+
+<!-- Detalhes do Estudo (Dia 28) -->
+<div class="study-detail" id="studyDetail28">
+    <h2>Estudos do Dia 28 - PM SP</h2>
+    <div class="subject-list">
+        <h3>Informática</h3>
+        <div class="subject"><strong>Redes de Comunicação:</strong> Estudo das redes de comunicação no contexto de segurança pública.</div>
+        <div class="subject"><strong>Segurança Online:</strong> Como garantir a segurança nas informações trocadas por sistemas policiais.</div>
+        <h3>Redação</h3>
+        <div class="subject"><strong>Texto Dissertativo:</strong> Estrutura e técnicas para desenvolver um texto dissertativo eficaz.</div>
+    </div>
+    
+</div>
+
+<!-- Detalhes do Estudo (Dia 29) -->
+<div class="study-detail" id="studyDetail29">
+    <h2>Estudos do Dia 29 - PM SP</h2>
+    <div class="subject-list">
+        <h3>Português</h3>
+        <div class="subject"><strong>Figuras de Linguagem:</strong> Como identificar e interpretar as figuras de linguagem no texto.</div>
+        <div class="subject"><strong>Estrutura do Texto:</strong> Como construir parágrafos bem organizados e coerentes.</div>
+        <h3>Matemática</h3>
+        <div class="subject"><strong>Matemática Financeira:</strong> Estudo de juros simples e compostos, e suas aplicações no cotidiano.</div>
+    </div>
+    
+</div>
+
+<!-- Detalhes do Estudo (Dia 30) -->
+<div class="study-detail" id="studyDetail30">
+    <h2>Estudos do Dia 30 - PM SP</h2>
+    <div class="subject-list">
+        <h3>História</h3>
+        <div class="subject"><strong>Brasil Império:</strong> Estudo do período Imperial e sua organização política e social.</div>
+        <div class="subject"><strong>Movimentos Sociais:</strong> Análise dos movimentos sociais no Brasil, como a abolição da escravatura.</div>
+        <h3>Geografia</h3>
+        <div class="subject"><strong>Urbanização:</strong> Estudo do crescimento das cidades e seus problemas associados.</div>
+    </div>
+    
+</div>
+
+
+
+    </div>
+
+    <script>
+        function showStudyDetails(day) {
+            // Esconde todas as seções de detalhes
+            var details = document.querySelectorAll('.study-detail');
+            details.forEach(function(detail) {
+                detail.style.display = 'none';
+            });
+
+            // Exibe a seção de detalhes do dia clicado
+            document.getElementById('studyDetail' + day).style.display = 'block';
+        }
+
+        function hideStudyDetails(day) {
+            // Esconde a seção de detalhes do dia
+            document.getElementById('studyDetail' + day).style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
